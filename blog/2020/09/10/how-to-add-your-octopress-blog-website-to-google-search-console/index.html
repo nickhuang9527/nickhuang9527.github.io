@@ -5,13 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Nick's Blog</title>
+  <title>如何使Octopress website能被Google搜索到 - Nick's Blog</title>
   <meta name="author" content="Nick Huang">
 
   
-  <meta name="description" content="Blog Archive 2020 如何使Octopress website能被Google搜索到
-Sep 10 2020 posted in octopress 使用Octopress架設靜態Blog
-Sep 10 2020 posted in octopress Recent Posts &hellip;">
+  <meta name="description" content="登入Google search console
+選擇網址前置字元
+提交Blog的Domain namehttp://[username].github.io/
+下載驗證的html檔案
+放到octopress/source目錄下
+建置及部署 rake gen_deploy 回到Google &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +23,7 @@ Sep 10 2020 posted in octopress Recent Posts &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nickhuang9527.github.io/blog/archives/">
+  <link rel="canonical" href="http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Nick's Blog" type="application/atom+xml">
@@ -66,50 +69,92 @@ Sep 10 2020 posted in octopress Recent Posts &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">如何使Octopress website能被Google搜索到</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2020-09-10T23:29:22+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>11:29 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://nickhuang9527.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
-
-  
-  <h2>2020</h2>
-
-<article>
-  
-<h1><a href="/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/">如何使Octopress website能被Google搜索到</a></h1>
-<time datetime="2020-09-10T23:29:22+08:00" pubdate><span class='month'>Sep</span> <span class='day'>10</span> <span class='year'>2020</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/octopress/'>octopress</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2020/09/10/octopress-setup/">使用Octopress架設靜態Blog</a></h1>
-<time datetime="2020-09-10T23:18:16+08:00" pubdate><span class='month'>Sep</span> <span class='day'>10</span> <span class='year'>2020</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/octopress/'>octopress</a></span>
-</footer>
-
-
-</article>
+<div class="entry-content"><ol>
+<li>登入<a href="https://search.google.com/search-console/welcome">Google search console</a></li>
+<li>選擇<code>網址前置字元</code></li>
+<li>提交Blog的Domain name<code>http://[username].github.io/</code></li>
+<li>下載驗證的html檔案</li>
+<li>放到<code>octopress/source</code>目錄下</li>
+<li>建置及部署
+ <code>
+rake gen_deploy
+</code></li>
+<li>回到Google search console，點擊驗證，完成</li>
+</ol>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Nick Huang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2020-09-10T23:29:22+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>11:29 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/" data-via="" data-counturl="http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2020/09/10/octopress-setup/" title="Previous Post: 使用Octopress架設靜態Blog">&laquo; 使用Octopress架設靜態Blog</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -152,7 +197,10 @@ Sep 10 2020 posted in octopress Recent Posts &hellip;">
       var disqus_shortname = 'nickhuang9527';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/';
+        var disqus_url = 'http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

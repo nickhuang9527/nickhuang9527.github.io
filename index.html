@@ -9,7 +9,12 @@
   <meta name="author" content="Nick Huang">
 
   
-  <meta name="description" content="為什麼要寫Blog? 工作中受到了很多教學網站及博客文章(簡書, CSDN, Medium&hellip;)非常多的幫助，因此想寫部落格將自己學到的技術記錄下來，一方面讓自己複習，一方面也希望能幫助到有需要的人。 為什麼用Octopress? 其實有很多現成免費的部落格平台像是Medium, &hellip;">
+  <meta name="description" content="登入Google search console
+選擇網址前置字元
+提交Blog的Domain namehttp://[username].github.io/
+下載驗證的html檔案
+放到octopress/source目錄下
+建置及部署 rake gen_deploy 回到Google &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +76,50 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/">如何使Octopress website能被Google搜索到</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2020-09-10T23:29:22+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>11:29 pm</span></time>
+        
+           | <a href="/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/#disqus_thread"
+             data-disqus-identifier="http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li>登入<a href="https://search.google.com/search-console/welcome">Google search console</a></li>
+<li>選擇<code>網址前置字元</code></li>
+<li>提交Blog的Domain name<code>http://[username].github.io/</code></li>
+<li>下載驗證的html檔案</li>
+<li>放到<code>octopress/source</code>目錄下</li>
+<li>建置及部署
+ <code>
+rake gen_deploy
+</code></li>
+<li>回到Google search console，點擊驗證，完成</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2020/09/10/octopress-setup/">使用Octopress架設靜態Blog</a></h1>
     
     
@@ -81,6 +130,9 @@
 
 
 <time class='entry-date' datetime='2020-09-10T23:18:16+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2020</span></span> <span class='time'>11:18 pm</span></time>
+        
+           | <a href="/blog/2020/09/10/octopress-setup/#disqus_thread"
+             data-disqus-identifier="http://nickhuang9527.github.io/blog/2020/09/10/octopress-setup/">Comments</a>
         
       </p>
     
@@ -286,6 +338,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/">如何使Octopress website能被Google搜索到</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2020/09/10/octopress-setup/">使用Octopress架設靜態Blog</a>
       </li>
     
@@ -308,6 +364,19 @@
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'nickhuang9527';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Nick's Blog]]></title>
   <link href="http://nickhuang9527.github.io/atom.xml" rel="self"/>
   <link href="http://nickhuang9527.github.io/"/>
-  <updated>2020-09-10T23:28:27+08:00</updated>
+  <updated>2020-09-10T23:41:47+08:00</updated>
   <id>http://nickhuang9527.github.io/</id>
   <author>
     <name><![CDATA[Nick Huang]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[如何使Octopress website能被Google搜索到]]></title>
+    <link href="http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console/"/>
+    <updated>2020-09-10T23:29:22+08:00</updated>
+    <id>http://nickhuang9527.github.io/blog/2020/09/10/how-to-add-your-octopress-blog-website-to-google-search-console</id>
+    <content type="html"><![CDATA[<ol>
+<li>登入<a href="https://search.google.com/search-console/welcome">Google search console</a></li>
+<li>選擇<code>網址前置字元</code></li>
+<li>提交Blog的Domain name<code>http://[username].github.io/</code></li>
+<li>下載驗證的html檔案</li>
+<li>放到<code>octopress/source</code>目錄下</li>
+<li>建置及部署
+ <code>
+rake gen_deploy
+</code></li>
+<li>回到Google search console，點擊驗證，完成</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[使用Octopress架設靜態Blog]]></title>
