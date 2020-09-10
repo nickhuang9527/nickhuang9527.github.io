@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Nick's Blog]]></title>
+  <link href="http://nickhuang9527.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://nickhuang9527.github.io/"/>
+  <updated>2020-09-10T23:20:22+08:00</updated>
+  <id>http://nickhuang9527.github.io/</id>
+  <author>
+    <name><![CDATA[Nick Huang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用Octopress架設靜態Blog]]></title>
+    <link href="http://nickhuang9527.github.io/blog/2020/09/10/octopress-setup/"/>
+    <updated>2020-09-10T23:18:16+08:00</updated>
+    <id>http://nickhuang9527.github.io/blog/2020/09/10/octopress-setup</id>
+    <content type="html"><![CDATA[<h2>為什麼要寫Blog?</h2>
+
+<p>工作中受到了很多教學網站及博客文章(簡書, CSDN, Medium&hellip;)非常多的幫助，因此想寫部落格將自己學到的技術記錄下來，一方面讓自己複習，一方面也希望能幫助到有需要的人。</p>
+
+<h2>為什麼用Octopress?</h2>
+
+<p>其實有很多現成免費的部落格平台像是Medium, Blogger等&hellip;，但最後我還是決定用Octopress來建立自己的部落格，它吸引我的原因如下:</p>
+
+<ol>
+<li>使用Git做版本控管，託管於Github</li>
+<li>使用Markdown寫文章</li>
+<li>可以學到東西</li>
+<li>免費</li>
+</ol>
+
+
+<p>Git對軟體工程師再熟悉不過了，且託管於工程師最愛充滿開源專案的Github平台，用Markdown寫文章，也能訓練自己寫README語法的熟練程度，又可以學到東西，因此選擇Octopress。</p>
+
+<h2>事前準備</h2>
+
+<ul>
+<li>申請<a href="https://github.com">Github</a>帳號</li>
+<li>安裝<a href="https://git-scm.com">Git</a></li>
+</ul>
+
+
+<pre><code>brew install git
+</code></pre>
+
+<ul>
+<li>安裝<a href="https://www.ruby-lang.org/zh_tw/documentation/installation/">Ruby</a></li>
+</ul>
+
+
+<pre><code>brew install ruby
+</code></pre>
+
+<p>確認版本</p>
+
+<pre><code>ruby --version
+</code></pre>
+
+<h2>建置Octopress</h2>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+</code></pre>
+
+<p>安裝依賴</p>
+
+<pre><code>gem install bundler
+rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+bundle install
+</code></pre>
+
+<p>安裝Octopress預設主題</p>
+
+<pre><code>rake install
+</code></pre>
+
+<h2>Github page</h2>
+
+<p><a href="https://pages.github.com">Github page</a>提供我們免費架設靜態網站，雖然有些限制(Ex: 沒有DB, Server配置等&hellip;)，但非常簡易就能部署，非常適合用來做個人部落格。</p>
+
+<ol>
+<li>到<a href="https://github.com">Github</a>申請一個帳號</li>
+<li>建立一個repository，命名為[username].github.io，[username]為你Github的用戶名，請務必要用此格式命名，不然後面會無法部署。</li>
+</ol>
+
+
+<p>完成後會看到一個ssh URL
+<code>
+git@github.com:username/username.github.io.git
+</code>
+，這就是你的遠端repository位置</p>
+
+<h2>部署到Github page</h2>
+
+<ul>
+<li>設置Github page repo位置</li>
+</ul>
+
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<p>此時會要你輸入github page的位置，還記得上面建立完成後所產生的ssh URL，複製並輸入</p>
+
+<pre><code>git@github.com:username/username.github.io.git
+</code></pre>
+
+<ul>
+<li>產生及部署部落格</li>
+</ul>
+
+
+<pre><code>rake generate
+rake deploy
+</code></pre>
+
+<p>上面指令會產生出你的部落格，並把產生的檔案複製到<code>_deploy/</code>資料匣中，並把它們加入git中，commit及push到master branch。</p>
+
+<p>到這裡你可以先在Browser打開<a href="http://">http://</a>[username].github.io/，就可以看到你的部落格囉!</p>
+
+<p>最後別忘記將source commit並push到遠端的repo</p>
+
+<pre><code>git add .
+git commit -m 'your message'
+git push origin source
+</code></pre>
+
+<h2>發布文章</h2>
+
+<p>所有的文章必須放在<code>source/_posts</code>目錄下</p>
+
+<ul>
+<li>創建新文章</li>
+</ul>
+
+
+<pre><code>rake new_post["title"]
+</code></pre>
+
+<p>此時在<code>source/_posts</code>目錄下會產生一個<code>YYYY-MM-DD-post-title.markdown</code>的檔案，我們就可以打開檔案開始寫部落格了</p>
+
+<pre><code>cd source/_posts/
+vim YYYY-MM-DD-post-title.markdown
+</code></pre>
+
+<p>也可用其他編輯器開啟寫文章，像是: <a href="https://macdown.uranusjr.com">MacDown</a>等&hellip;</p>
+
+<p>寫完文章後再執行前面提到的<strong><em>產生及部署部落格</em></strong></p>
+
+<pre><code>rake generate
+rake deploy
+</code></pre>
+
+<p>or</p>
+
+<pre><code>rake gen_deploy
+</code></pre>
+
+<p>最後再將剛所寫的文章加入commit，並push到遠端的repo</p>
+
+<pre><code>git add .
+git commit -m 'your message'
+git push origin source
+</code></pre>
+
+<h2>總結</h2>
+
+<p>Octopress基礎建置就到這邊，未來如果有時間會再深入研究更多Octopress的新功能，寫成文章分享給大家!</p>
+]]></content>
+  </entry>
+  
+</feed>
