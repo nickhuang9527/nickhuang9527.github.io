@@ -99,3 +99,7 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Google Search
+include: ["googlea8f8d0632c7c4644.html"]
+
